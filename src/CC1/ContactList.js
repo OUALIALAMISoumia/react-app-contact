@@ -149,19 +149,19 @@ export function ContactList() {
         </div>
       </div>
 
-      
-
       <table className="col-md-12 mt-5">
-            {
-              contacts.map((contact) => {
-                return <tr key={contact.id}> <Contact
-                  name={contact.name}
-                  phone={contact.phone}
-                  city={contact.city}
-                  onDelete={() => DeleteContact(contact.id)}
-                /></tr>
-              })
-            }
+        {contacts.map((contact) => {
+          return (
+            <tr className="row" key={contact.id}>
+              <Contact
+                name={contact.name}
+                phone={contact.phone}
+                city={contact.city}
+                onDelete={() => DeleteContact(contact.id)}
+              />
+            </tr>
+          );
+        })}
       </table>
     </div>
   );
