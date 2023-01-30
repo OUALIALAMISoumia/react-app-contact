@@ -6,7 +6,7 @@ import "./Style.css";
 export function ContactList() {
   const [contacts, setContacts] = useState([
     { id: uuid(), name: "MLAMI", phone: "0664374731", city: "Tanger" },
-    { id: uuid(), name: "ALLALI", phone: "07089573", city: "Casa Blanca" },
+    { id: uuid(), name: "ALLALI", phone: "0708957321", city: "Casa Blanca" },
     { id: uuid(), name: "ELNASSIRI", phone: "0658974213", city: "Rabat" },
   ]);
 
@@ -148,22 +148,21 @@ export function ContactList() {
           />
         </div>
       </div>
-      <div className="row mt-4">
-        <div className="col-md-8">
-          <div className="col">
-            {contacts.map((contact) => (
-              <Contact
-                key={contact.id}
-                name={contact.name}
-                phone={contact.phone}
-                city={contact.city}
-                onDelete={() => DeleteContact(contact.id)}
-              />
-            ))}
-            ;
-          </div>
-        </div>
-      </div>
+
+      
+
+      <table className="col-md-12 mt-5">
+            {
+              contacts.map((contact) => {
+                return <tr key={contact.id}> <Contact
+                  name={contact.name}
+                  phone={contact.phone}
+                  city={contact.city}
+                  onDelete={() => DeleteContact(contact.id)}
+                /></tr>
+              })
+            }
+      </table>
     </div>
   );
 }

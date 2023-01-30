@@ -3,24 +3,31 @@ import React from 'react'
 
 
 
-function Contact({name, phone, city, onDelete}) {
+function Contact({id,name, phone, city, onDelete}) {
   return (
-    <div className="col-md-8 mb-4 mx-2">
-      <div  className="card">
-        <div className="">
-          <div className="justify-content-between">
-            <img src="" alt="" />
-            <h6>Name  : {name}  </h6>
-            <h6>Phone : {phone} </h6>
-            <h6>City  : {city}  </h6> 
-          </div>
-        </div>
-        <div className="card-footer bg-light d-flex">
-          <button className="col-3 del-btn btn btn-sm btn-danger " onClick={onDelete}>
-            Delete
-          </button>
-        </div>
-      </div>
+    <div className="table">
+      <table className="table table-bordered border-dark border-opacity-75 table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">City</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody className="table-group-divider">
+          <tr key={id}>
+          <th scope="row">{name}</th>
+          <td>{phone}</td>
+          <td>{city}</td>
+          <td>
+            <button className="col-6 del-btn btn btn-sm btn-danger " onClick={onDelete}>
+              Delete
+            </button>          
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   )
 }
