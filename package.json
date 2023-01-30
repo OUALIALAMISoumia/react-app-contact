@@ -14,10 +14,10 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": { 
-    "homepage":"https://karim-azeggouar.github.io/fullstack2",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+  "scripts": {
+    "homepage": "https://OUALIALAMISoumia.github.io/react-app-contact",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
