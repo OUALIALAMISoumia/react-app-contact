@@ -1,0 +1,35 @@
+/* the application */
+#app {
+  width: 90%;
+  /* margin: 0 auto; */
+  font-family: Arial, sans-serif;
+}
+.c2 {
+  font-family: Arial, sans-serif;
+}
+
+.c4 {
+  padding: 10px;
+  float: right;
+  font-weight: bolder;
+  border-radius: 7px;
+}
+
+body {
+  background-image: linear-gradient(rgb(128, 125, 214), rgb(128, 125, 214));
+  background-repeat: no-repeat;
+  height: 2000px;
+  padding: 50px;
+}
+
+.c1 {
+  border: solid rgb(5, 39, 188) 1px;
+  width: 700px;
+  height: 550px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(85, 85, 159);
+  box-shadow: inset 0px 0px 40px 0px rgb(46, 3, 3);
+  padding: 60px;
+}
+
